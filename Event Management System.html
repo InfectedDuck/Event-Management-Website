@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система управления мероприятиями</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="star-field"></div>
+    <header>
+        <nav>
+            <div class="logo">Kametay Events</div>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О Нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <h1>Мероприятия в городе Семей!</h1>
+    </header>
+    <main>
+        
+        <section class="events-selection">
+            <h2>Выберите дату:</h2>
+            <div class="date-selection">
+                <div class="month">
+                    <p>МАЙ</p>
+                    <div class="dates">
+                        <button class="date-button" data-date="2024-05-28">28<br>ВТ</button>
+                        <button class="date-button" data-date="2024-05-29">29<br>СР</button>
+                        <button class="date-button" data-date="2024-05-30">30<br>ЧТ</button>
+                        <button class="date-button" data-date="2024-05-31">31<br>ПТ</button>
+                    </div>
+                </div>
+                <div class="month">
+                    <p>ИЮНЬ</p>
+                    <div class="dates">
+                        <button class="date-button" data-date="2024-06-01">01<br>СБ</button>
+                        <button class="date-button" data-date="2024-06-02">02<br>ВС</button>
+                        <button class="date-button" data-date="2024-06-03">03<br>ПН</button>
+                        <button class="date-button" data-date="2024-06-04">04<br>ВТ</button>
+                        <button class="date-button" data-date="2024-06-05">05<br>СР</button>
+                        <button class="date-button" data-date="2024-06-06">06<br>ЧТ</button>
+                        <button class="date-button" data-date="2024-06-07">07<br>ПТ</button>
+                        <button class="date-button" data-date="2024-06-08">08<br>СБ</button>
+                        <button class="date-button" data-date="2024-06-09">09<br>ВС</button>
+                        <button class="date-button" data-date="2024-06-10">10<br>ПН</button>
+                        <button class="date-button" data-date="2024-06-11">11<br>ВТ</button>
+                        <button class="date-button" data-date="2024-06-12">12<br>СР</button>
+                        <button class="date-button" data-date="2024-06-13">13<br>ЧТ</button>
+                        <button class="date-button" data-date="2024-06-14">14<br>ПТ</button>
+                        <button class="date-button" data-date="2024-06-15">15<br>СБ</button>
+                        <button class="date-button" data-date="2024-06-16">16<br>ВС</button>
+                        <button class="date-button" data-date="2024-06-17">17<br>ПН</button>
+                        <button class="date-button" data-date="2024-06-18">18<br>ВТ</button>
+                        <button class="date-button" data-date="2024-06-19">19<br>СР</button>
+                        <button class="date-button" data-date="2024-06-20">20<br>ЧТ</button>
+                        <button class="date-button" data-date="2024-06-21">21<br>ПТ</button>
+                        <button class="date-button" data-date="2024-06-22">22<br>СБ</button>
+                        <button class="date-button" data-date="2024-06-23">23<br>ВС</button>
+                        <button class="date-button" data-date="2024-06-24">24<br>ПН</button>
+                        <button class="date-button" data-date="2024-06-25">25<br>ВТ</button>
+                        <button class="date-button" data-date="2024-06-26">26<br>СР</button>
+                        <button class="date-button" data-date="2024-06-27">27<br>ЧТ</button>
+                        <button class="date-button" data-date="2024-06-28">28<br>ПТ</button>
+                        <button class="date-button" data-date="2024-06-29">29<br>СБ</button>
+                        <button class="date-button" data-date="2024-06-30">30<br>ВС</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="events-display">
+            <div class="event-list"></div>
+        </section>
+        <section class="events-section">
+            <h2>Популярное</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <article class="event" data-date="2024-06-13">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Великолепие корейских дорам.png" alt="Великолепие корейских дорам" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Великолепие корейских дорам в исполнении JAZI ORCHESTRA</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Великолепие корейских дорам в исполнении JAZI ORCHESTRA</h3>
+                            <p><strong>Дата:</strong> 13 июня 2024</p>
+                            <p><strong>Время:</strong> 17:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 5000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-06">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Unight.png" alt="Ұ-Night Show" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Ұ-Night Show</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Ұ-Night Show</h3>
+                            <p><strong>Дата:</strong> 6 июня 2024</p>
+                            <p><strong>Время:</strong> 19:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Доступность мест:</strong> от 2000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-13">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Jazi.png" alt="JAZI Orchestra" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">JAZI Orchestra - Концерт Пацанских Саундтреков</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>JAZI Orchestra - Концерт Пацанских Саундтреков</h3>
+                            <p><strong>Дата:</strong> 13 июня 2024</p>
+                            <p><strong>Время:</strong> 20:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Доступность мест:</strong> от 5000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-15">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Attila.png" alt="Миф об Атилле" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Миф об Атилле</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Миф об Атилле</h3>
+                            <p><strong>Дата:</strong> 15 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Доступность мест:</strong> от 3000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-01">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\tracktor.png" alt="Шоу Синий Трактор" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Шоу «СИНИЙ ТРАКТОР</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Шоу «СИНИЙ ТРАКТОР»</h3>
+                            <p><strong>Дата:</strong> 1 июня 2024</p>
+                            <p><strong>Время:</strong> 12:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 2000</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-button prev">‹</button>
+                <button class="carousel-button next">›</button>
+            </div>
+        </section>
+        <section class="events-section">
+            <h2>Новое</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <article class="event" data-date="2024-06-25">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Astana to Semey.png" alt="Коштаскым келмейди Семей қаласында" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Коштаскым келмейди Семей қаласында</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Коштаскым келмейди Семей қаласында</h3>
+                            <p><strong>Дата:</strong> 25 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 3000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-10">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\mozartsaliery.png" alt="А.С. Пушкин: Моцарт и Сальери" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">А.С. Пушкин: Моцарт и Сальери</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>А.С. Пушкин: Моцарт и Сальери</h3>
+                            <p><strong>Дата:</strong> 10 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 1500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-20">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\enlik-kebek.png" alt="Енлик-Кебек Абая" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Енлик-Кебек Абая</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Енлик-Кебек Абая</h3>
+                            <p><strong>Дата:</strong> 20 июня 2024</p>
+                            <p><strong>Время:</strong> 17:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 2500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-30">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\oz oti.png" alt="Оз отынды оширме, Дарига ай" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Оз отынды оширме, Дарига ай</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Оз отынды оширме, Дарига ай</h3>
+                            <p><strong>Дата:</strong> 30 июня 2024</p>
+                            <p><strong>Время:</strong> 19:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 2000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-15">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Attila.png" alt="Миф об Атилле" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Миф об Атилле</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Миф об Атилле</h3>
+                            <p><strong>Дата:</strong> 15 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Доступность мест:</strong> от 3000</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-button prev">‹</button>
+                <button class="carousel-button next">›</button>
+            </div>
+        </section>
+        <section class="events-section">
+            <h2>Все события</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <article class="event" data-date="2024-05-29">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\greatesthits.png" alt="The Greatest Hits" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">The Greatest Hits</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>The Greatest Hits</h3>
+                            <p><strong>Дата:</strong> 29 мая 2024</p>
+                            <p><strong>Время:</strong> 19:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 3000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-05">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Astana to Semey.png" alt="Гауһартас Семей қаласында" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Гауһартас Семей қаласында</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Гауһартас Семей қаласында</h3>
+                            <p><strong>Дата:</strong> 5 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 3500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-10">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\polufinal.png" alt="Полуфинал чемпионата" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Полуфинал плей-офф чемпионата КЗ ФК Семей</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Полуфинал плей-офф чемпионата КЗ ФК Семей</h3>
+                            <p><strong>Дата:</strong> 10 июня 2024</p>
+                            <p><strong>Время:</strong> 16:00</p>
+                            <p><strong>Место:</strong> Стадион ФК Семей</p>
+                            <p><strong>Цена:</strong> от 4000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-12">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Astana to Semey.png" alt="Абай-Тогжан Семей қаласында" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Абай-Тогжан Семей қаласында</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Абай-Тогжан Семей қаласында</h3>
+                            <p><strong>Дата:</strong> 12 июня 2024</p>
+                            <p><strong>Время:</strong> 17:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 4500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-25">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Astana to Semey.png" alt="Коштаскым келмейди Семей қаласында" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Коштаскым келмейди Семей қаласында</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Коштаскым келмейди Семей қаласында</h3>
+                            <p><strong>Дата:</strong> 25 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 3000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-13">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Великолепие корейских дорам.png" alt="Великолепие корейских дорам" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Великолепие корейских дорам в исполнении JAZI ORCHESTRA</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Великолепие корейских дорам в исполнении JAZI ORCHESTRA</h3>
+                            <p><strong>Дата:</strong> 13 июня 2024</p>
+                            <p><strong>Время:</strong> 17:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 5000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-06">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Unight.png" alt="Ұ-Night Show" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Ұ-Night Show</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Ұ-Night Show</h3>
+                            <p><strong>Дата:</strong> 6 июня 2024</p>
+                            <p><strong>Время:</strong> 19:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Доступность мест:</strong> от 2000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-13">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Jazi.png" alt="JAZI Orchestra" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">JAZI Orchestra - Концерт Пацанских Саундтреков</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>JAZI Orchestra - Концерт Пацанских Саундтреков</h3>
+                            <p><strong>Дата:</strong> 13 июня 2024</p>
+                            <p><strong>Время:</strong> 20:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Доступность мест:</strong> от 5000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-15">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\Attila.png" alt="Миф об Атилле" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Миф об Атилле</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Миф об Атилле</h3>
+                            <p><strong>Дата:</strong> 15 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Доступность мест:</strong> от 3000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-01">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\tracktor.png" alt="Шоу Синий Трактор" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Шоу «СИНИЙ ТРАКТОР</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Шоу «СИНИЙ ТРАКТОР»</h3>
+                            <p><strong>Дата:</strong> 1 июня 2024</p>
+                            <p><strong>Время:</strong> 12:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 2000</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-10">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\mozartsaliery.png" alt="А.С. Пушкин: Моцарт и Сальери" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">А.С. Пушкин: Моцарт и Сальери</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>А.С. Пушкин: Моцарт и Сальери</h3>
+                            <p><strong>Дата:</strong> 10 июня 2024</p>
+                            <p><strong>Время:</strong> 18:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 1500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-20">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\enlik-kebek.png" alt="Енлик-Кебек Абая" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Енлик-Кебек Абая</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Енлик-Кебек Абая</h3>
+                            <p><strong>Дата:</strong> 20 июня 2024</p>
+                            <p><strong>Время:</strong> 17:00</p>
+                            <p><strong>Место:</strong> Городской дворец культуры</p>
+                            <p><strong>Цена:</strong> от 2500</p>
+                        </div>
+                    </article>
+                    <article class="event" data-date="2024-06-30">
+                        <img src="C:\Users\Impacto Gaming 20\Desktop\images\oz oti.png" alt="Оз отынды оширме, Дарига ай" class="event-image">
+                        <div class="event-overlay">
+                            <div class="event-title">Оз отынды оширме, Дарига ай</div>
+                            <button class="event-button">Купить билеты</button>
+                        </div>
+                        <div class="event-info">
+                            <h3>Оз отынды оширме, Дарига ай</h3>
+                            <p><strong>Дата:</strong> 30 июня 2024</p>
+                            <p><strong>Время:</strong> 19:00</p>
+                            <p><strong>Место:</strong> Русский драматический театр</p>
+                            <p><strong>Цена:</strong> от 2000</p>
+                        </div>
+                    </article>
+                </div>
+                <button class="carousel-button prev">‹</button>
+                <button class="carousel-button next">›</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Система управления мероприятиями. Все права защищены.</p>
+    </footer>
+    <script src="document.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const starField = document.querySelector('.star-field');
+            const stars = 100; // Number of stars
+
+            for (let i = 0; i < stars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                starField.appendChild(star);
+            }
+        });
+    </script>
+</body>
+</html>
