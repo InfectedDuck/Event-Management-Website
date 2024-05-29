@@ -1,0 +1,240 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f4f4f9, #e0eafc);
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #5a0fb9, #1d6de8);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    animation: logoAnimation 2s ease-in-out infinite;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes logoAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.events-list {
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.events-list h1 {
+    margin: 20px 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2575fc;
+    transition: color 0.3s ease;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.event img:hover {
+    transform: scale(1.05);
+}
+
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.event:hover .event-overlay {
+    opacity: 1;
+}
+
+.event-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.event-button {
+    background-color: #ffeb3b;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #fdd835;
+}
+
+.event-info {
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.event-info h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #6a11cb;
+}
+
+.event-info p {
+    margin: 5px 0;
+}
+
+.event-info p strong {
+    color: #2575fc;
+}
+
+footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .event {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul li {
+        margin-left: 10px;
+    }
+
+    .event {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ffeb3b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}

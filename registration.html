@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти или Регистрация</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kametay Events</div>
+            <ul>
+                <li><a href="Event%20Management%20System.html">Главная</a></li>
+                <li><a href="#">О Нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <h1>Добро пожаловать!</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="login-form">
+                <h2>Войти</h2>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="button">ВОЙТИ</button>
+                <p>Нет аккаунта? <a href="#" id="show-register-form">Регистрация</a></p>
+            </form>
+            <form id="register-form" style="display: none;">
+                <h2>Регистрация</h2>
+                <div class="input-group">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="input-group">
+                    <label for="age">Возраст:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Пароль:</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Подтвердите пароль:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="button">Регистрация</button>
+                <p>Уже есть аккаунт? <a href="#" id="show-login-form">Войти</a></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Система управления мероприятиями. Все права защищены.</p>
+    </footer>
+    <script>
+        document.getElementById('show-register-form').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        });
+
+        document.getElementById('show-login-form').addEventListener('click', function() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
