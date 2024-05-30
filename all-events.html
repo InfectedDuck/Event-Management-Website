@@ -6,16 +6,16 @@
     <title>Все мероприятия</title>
     <link rel="stylesheet" href="styli.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Подключение CSS для стилей страницы и шрифта Roboto -->
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Kametay Events</div>
+            <div class="logo">Kametay Events</div> <!-- Логотип компании -->
             <ul>
-                <li><a href="Event%20Management%20System.html">Главная</a></li>
-                <li><a href="#">О Нас</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="registration.html" class="button">ВОЙТИ</a></li>
+                <li><a href="Event%20Management%20System.html">Главная</a></li> <!-- Ссылка на главную страницу -->
+                <li><a href="#">О Нас</a></li> <!-- Ссылка на страницу "О Нас" -->
+                <li><a href="registration.php" class="button" id="login-link">Войти</a></li> <!-- Ссылка на страницу регистрации/входа -->
             </ul>
         </nav>
     </header>
@@ -23,13 +23,14 @@
         <section class="events-list">
             <h1 id="events-title">Все мероприятия</h1>
             <div class="events-container" id="events-container">
-                <!-- Events will be populated here -->
+                <!-- События будут добавлены сюда с помощью JavaScript -->
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Система управления мероприятиями. Все права защищены.</p>
+        <!-- Подвал сайта с копирайтом -->
     </footer>
-    <script src="all-events.js"></script>
+    <script src="all-events.js"></script> <!-- Подключение JavaScript файла для управления событиями -->
 </body>
 </html>

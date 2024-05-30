@@ -1,0 +1,257 @@
+/* Основные стили для body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f4f4f9, #e0eafc); /* Градиентный фон */
+    color: #333; /* Основной цвет текста */
+    transition: background 0.3s ease, color 0.3s ease; /* Плавный переход фона и цвета */
+}
+
+/* Стили для header */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон для header */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    position: sticky; /* Фиксация header при прокрутке */
+    top: 0; /* Прилипание к верху */
+    z-index: 1000; /* Слой header */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавный переход фона и тени */
+}
+
+/* Стили для header при наведении */
+header:hover {
+    background: linear-gradient(135deg, #5a0fb9, #1d6de8); /* Изменение градиента фона при наведении */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Увеличение тени при наведении */
+}
+
+/* Анимация логотипа */
+header .logo {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    animation: logoAnimation 2s ease-in-out infinite; /* Анимация увеличения */
+}
+
+/* Стили для навигации */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для списка навигации */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Стили для элементов списка */
+header nav ul li {
+    margin-left: 20px;
+}
+
+/* Стили для ссылок в навигации */
+header nav ul li a {
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Удаление подчеркивания */
+    font-weight: 500; /* Толщина шрифта */
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+}
+
+/* Стили для ссылок при наведении */
+header nav ul li a:hover {
+    color: #ffeb3b; /* Изменение цвета текста при наведении */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Тень текста при наведении */
+}
+
+/* Анимация для логотипа */
+@keyframes logoAnimation {
+    0%, 100% {
+        transform: scale(1); /* Начальное и конечное состояние */
+    }
+    50% {
+        transform: scale(1.1); /* Увеличение в середине анимации */
+    }
+}
+
+/* Стили для списка билетов */
+.tickets-list li {
+    background-color: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для кнопок в списке билетов */
+.tickets-list li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для кнопок при наведении в списке билетов */
+.tickets-list li button:hover {
+    background-color: #d1d1d1;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Стили для контента модального окна */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Стили для кнопки закрытия модального окна */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Стили для кнопки закрытия модального окна при наведении и фокусировке */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для контейнера профиля */
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для текста и списка билетов */
+.user-details p, .tickets-list ul {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333; /* Темный цвет текста */
+}
+
+/* Стили для списка билетов */
+.tickets-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стили для элементов списка билетов */
+.tickets-list li {
+    background-color: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333; /* Темный цвет текста */
+}
+
+/* Стили для списка навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для элементов списка навигации */
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Стили для ссылок в навигации */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Стили для ссылок в навигации при наведении */
+nav ul li a:hover {
+    color: #ffeb3b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для footer */
+footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Стили для текста в footer */
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Кастомизация скроллбара */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0eafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6a11cb;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2575fc;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .profile-container {
+        width: 90%;
+        padding: 10px;
+    }
+}

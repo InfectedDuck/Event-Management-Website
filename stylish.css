@@ -1,153 +1,356 @@
+/* Глобальные стили */
+/* Задаем шрифт для текста */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    background: #f4f4f9; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    transition: background 0.3s ease, color 0.3s ease; /* Плавный переход для цвета фона и текста */
+}
+
+/* Задаем коробочную модель для элементов */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
-    transition: background 0.3s ease, color 0.3s ease;
+    box-sizing: border-box; /* Обеспечиваем консистентную модель блока */
 }
 
+/* Стили для заголовка */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-header:hover {
-    background: linear-gradient(135deg, #5a0fb9, #1d6de8);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
+    background: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 10px 20px; /* Отступы внутри заголовка */
+    display: flex; /* Flex-раскладка для заголовка */
+    justify-content: space-between; /* Выравнивание элементов по горизонтали */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-header nav ul {
-    list-style: none;
+/* Стили для навигации */
+nav ul {
+    list-style: none; /* Убираем стили списка */
+    display: flex; /* Flex-раскладка для навигации */
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-header nav ul li {
-    margin-left: 20px;
+nav ul li {
+    margin: 0 10px; /* Отступы между элементами навигации */
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+nav ul li a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
-header nav ul li a:hover {
-    color: #ffeb3b;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
+/* Стили для деталей мероприятия */
 .event-detail {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-.event-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.event-header h1 {
-    font-size: 36px;
-    color: #6a11cb;
+    padding: 20px; /* Отступы внутри секции с деталями мероприятия */
 }
 
 .event-content {
-    display: flex;
-    gap: 20px;
-}
-
-.event-image-wrapper {
-    flex: 2;
-    text-align: center;
+    display: flex; /* Flex-раскладка для содержимого мероприятия */
+    gap: 50px; /* Расстояние между элементами */
 }
 
 .event-image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.event-image-wrapper img:hover {
-    transform: scale(1.05);
+    width: 300px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Подгонка изображения по размеру */
 }
 
 .event-description {
-    flex: 2;
-    font-size: 18px;
-    color: #555;
+    margin-left: 0; /* Убираем левый отступ */
 }
 
+/* Стили для модального окна */
+.modal {
+    display: none; /* Изначально скрываем модальное окно */
+    position: fixed; /* Фиксированное позиционирование */
+    z-index: 1; /* Помещаем окно поверх остального контента */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Разрешаем прокрутку содержимого */
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Цвет фона модального окна */
+    margin: 10% auto; /* Центрируем по вертикали */
+    padding: 20px; /* Отступы внутри модального окна */
+    border: 1px solid #888; /* Граница для модального окна */
+    width: 80%; /* Ширина модального окна */
+    max-width: 1000px; /* Максимальная ширина */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.close {
+    color: #aaa; /* Цвет кнопки закрытия */
+    float: right; /* Положение кнопки закрытия справа */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Цвет кнопки закрытия при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Изменяем курсор при наведении */
+}
+
+/* Стили для контейнера мест */
+.seats-container {
+    display: grid; /* Сетка для контейнера мест */
+    grid-template-columns: repeat(24, 1fr); /* Определяем количество колонок */
+    gap: 5px; /* Расстояние между элементами */
+    margin-top: 20px; /* Отступ сверху */
+    justify-items: center; /* Выравниваем по центру */
+}
+
+.seat {
+    width: 25px; /* Ширина места */
+    height: 25px; /* Высота места */
+    background-color: #ddd; /* Цвет фона места */
+    border: 1px solid #ccc; /* Граница */
+    display: flex; /* Flex-раскладка для содержимого места */
+    align-items: center; /* Выравниваем содержимое по вертикали */
+    justify-content: center; /* Выравниваем содержимое по горизонтали */
+    cursor: pointer; /* Изменяем курсор при наведении на место */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+.seat.selected {
+    background-color: #6c7ae0; /* Цвет фона выбранных мест */
+}
+
+.seat.taken {
+    background-color: #ff6b6b; /* Цвет фона занятых мест */
+    cursor: not-allowed; /* Запрещаем клик на занятых местах */
+}
+
+.stage {
+    text-align: center; /* Выравнивание по центру */
+    margin: 10px 0; /* Отступы */
+    font-weight: bold; /* Жирный шрифт */
+}
+.price-9000 { background-color: #9575cd; } /* Фон для цены 9000 */
+.price-10000 { background-color: #a1887f; } /* Фон для цены 10000 */
+.price-11000 { background-color: #64b5f6; } /* Фон для цены 11000 */
+.price-13000 { background-color: #ffb74d; } /* Фон для цены 13000 */
+
+/* Стили для кнопки подтверждения выбора */
+#confirmSelection {
+    margin-top: 20px; /* Отступ сверху */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    background-color: #FFD700; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    border-radius: 10px; /* Закругленные углы */
+    font-weight: bold; /* Жирное начертание */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: background-color 0.3s, transform 0.3s; /* Плавное изменение цвета и размера */
+}
+
+#confirmSelection:hover {
+    background-color: #FFC107; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение размера при наведении */
+}
+
+/* Стили для кнопки покупки билета */
+.buy-ticket {
+    background-color: #FFD700; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    font-weight: bold; /* Жирное начертание */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и размера */
+}
+
+.buy-ticket:hover {
+    background-color: #FFC107; /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличение размера при наведении */
+}
+
+/* Легенда цен */
+.price-legend {
+    display: flex; /* Flex-раскладка для легенды цен */
+    justify-content: space-around; /* Выравнивание по горизонтали */
+    margin: 20px 0; /* Внешние отступы */
+}
+
+.price-legend div {
+    display: flex; /* Flex-раскладка внутри элементов легенды */
+    align-items: center; /* Выравнивание по вертикали */
+    font-size: 14px; /* Размер шрифта */
+}
+
+.price-legend span {
+    width: 20px; /* Ширина */
+    height: 20px; /* Высота */
+    display: inline-block; /* Отображение как блок элемента */
+    margin-right: 10px; /* Отступ справа */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Отступы внутри заголовка */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    position: sticky; /* Фиксированное позиционирование */
+    top: 0; /* Прижимаем заголовок к верху страницы */
+    z-index: 1000; /* Выставляем высокий уровень наложения */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавное изменение цвета фона и тени */
+}
+
+header:hover {
+    background: linear-gradient(135deg, #5a0fb9, #1d6de8); /* Градиентный фон при наведении */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Тень при наведении */
+}
+
+header .logo {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: 700; /* Жирное начертание */
+}
+
+/* Навигация */
+header nav {
+    display: flex; /* Flex-раскладка для навигации */
+    justify-content: space-between; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Автоматические внешние отступы по горизонтали */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+header nav ul {
+    list-style: none; /* Убираем стили списка */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flex-раскладка для списка */
+}
+
+header nav ul li {
+    margin-left: 10px; /* Отступ слева между элементами */
+}
+
+header nav ul li a {
+    color: white; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 500; /* Средний шрифт */
+    transition: color 0.3s ease; /* Плавное изменение цвета текста */
+}
+header nav ul li a:hover {
+    color: #ffeb3b; 
+    color: #ffeb3b; /* Цвет текста ссылки при наведении */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Тень для текста */
+}
+
+/* Главное содержимое */
+main {
+    max-width: 1200px; /* Максимальная ширина контента */
+    margin: 40px auto; /* Внешние отступы */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+/* Детали мероприятия */
+.event-detail {
+    background: white; /* Белый фон */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px; /* Отступы внутри блока */
+    animation: fadeIn 1.5s ease; /* Анимация появления */
+}
+
+/* Заголовок мероприятия */
+.event-header {
+    text-align: center; /* Выравнивание по центру */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.event-header h1 {
+    font-size: 36px; /* Размер шрифта */
+    color: #6a11cb; /* Цвет текста */
+}
+
+/* Содержимое мероприятия */
+.event-content {
+    display: flex; /* Flex-раскладка для содержимого мероприятия */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Обертка для изображения мероприятия */
+.event-image-wrapper {
+    flex: 2; /* Размер блока */
+    text-align: center; /* Выравнивание по центру */
+}
+
+.event-image-wrapper img {
+    max-width: 100%; /* Максимальная ширина изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 8px; /* Закругленные углы */
+    transition: transform 0.3s, filter 0.3s; /* Плавное изменение размера и фильтра */
+}
+
+.event-image-wrapper img:hover {
+    transform: scale(1.05); /* Увеличение размера при наведении */
+}
+
+/* Описание мероприятия */
+.event-description {
+    flex: 2; /* Размер блока */
+    font-size: 18px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+}
+
+/* Информация о мероприятии */
 .event-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex: 1; /* Размер блока */
+    display: flex; /* Flex-раскладка */
+    flex-direction: column; /* Направление колонок */
+    gap: 5px; /* Расстояние между элементами */
 }
 
 .event-info p {
-    font-size: 16px;
-    margin: 5px 0;
+    font-size: 16px; /* Размер шрифта */
+    margin: 0 0 5px 0; /* Внешние отступы */
 }
 
 .event-info p strong {
-    color: #555;
-    font-weight: 700;
+    color: #555; /* Цвет текста */
+    font-weight: 700; /* Жирное начертание */
 }
 
 .event-info p span {
-    color: #333;
-    font-weight: 500;
-    font-size: 18px;
+    color: #333; /* Цвет текста */
+    font-weight: 500; /* Полужирное начертание */
+    font-size: 18px; /* Размер шрифта */
 }
 
+/* Подвал */
 footer {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 10px 0; /* Внутренние отступы */
+    margin-top: 40px; /* Отступ сверху */
 }
 
 footer p {
-    margin: 0;
-    font-size: 14px;
+    margin: 0; /* Убираем внешние отступы */
+    font-size: 14px; /* Размер шрифта */
 }
 
+/* Анимация появления */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -157,40 +360,41 @@ footer p {
     }
 }
 
-/* Custom Scrollbar */
+/* Настраиваемый скроллбар */
+/* Скроллбар */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 10px; /* Ширина */
 }
 
 ::-webkit-scrollbar-track {
-    background: #e0eafc;
+    background: #e0eafc; /* Цвет фона трека */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #6a11cb;
-    border-radius: 5px;
+    background: #6a11cb; /* Цвет ползунка */
+    border-radius: 5px; /* Закругленные углы */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #2575fc;
+    background: #2575fc; /* Цвет ползунка при наведении */
 }
 
-/* Media Queries for Responsiveness */
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     main {
-        padding: 0 10px;
+        padding: 0 10px; /* Уменьшаем внутренние отступы */
     }
 
     .event-content {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Столбцовая раскладка для содержимого мероприятия */
+        align-items: center; /* Выравнивание по центру */
     }
 
     .event-header h1 {
-        font-size: 28px;
+        font-size: 28px; /* Уменьшаем размер заголовка */
     }
 
     .event-info p {
-        font-size: 14px;
+        font-size: 14px; /* Уменьшаем размер текста */
     }
 }

@@ -8,24 +8,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Верхняя часть страницы с логотипом и навигацией -->
     <header>
         <nav>
             <div class="logo">Kametay Events</div>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#">О Нас</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="Event%20Management%20System.html">Главная</a></li>
+                <li><a href="About Us.html">О Нас</a></li>
+                <li><a href="registration.php" class="button" id="login-link">Войти</a></li>
+                <li><a href="profile.php">Профиль</a></li>
             </ul>
         </nav>
     </header>
+    
+    <!-- Основной контент страницы -->
     <main>
         <section class="event-detail">
+            <!-- Заголовок мероприятия -->
             <h1 id="event-title">Заголовок мероприятия</h1>
             <div class="event-content">
+                <!-- Блок с изображением мероприятия -->
                 <div class="event-image-wrapper">
                     <img id="event-image" src="" alt="Изображение мероприятия">
                 </div>
-                <div class="event-description" id="event-description"></div>
+                <!-- Блок с описанием мероприятия -->
+                <div class="event-description">
+                    <div id="event-description"></div>
+                    <button class="buy-ticket" id="buy-ticket-button" data-event-id="1">КУПИТЬ БИЛЕТ</button>
+                </div>
+                <!-- Блок с дополнительной информацией о мероприятии -->
                 <div class="event-info">
                     <p id="event-date-wrapper"><strong>Дата:</strong> <span id="event-date"></span></p>
                     <p id="event-time-wrapper"><strong>Время:</strong> <span id="event-time"></span></p>
@@ -45,9 +56,33 @@
             </div>
         </section>
     </main>
+
+    <!-- Подвал страницы -->
     <footer>
         <p>&copy; 2024 Система управления мероприятиями. Все права защищены.</p>
     </footer>
+
+    <!-- Модальное окно для выбора места -->
+    <div id="seatSelectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Выберите место</h2>
+            <div class="stage">Сцена</div>
+            <div class="price-legend">
+                <div><span class="price-13000"></span>13 000</div>
+                <div><span class="price-11000"></span>11 000</div>
+                <div><span class="price-10000"></span>10 000</div>
+                <div><span class="price-9000"></span>9 000</div>
+            </div>
+            <div class="seats-container" id="seats-container">
+                <!-- Места будут динамически генерироваться здесь -->
+            </div>
+            <button id="confirmSelection">Подтвердить</button>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript файлов -->
     <script src="event-details.js"></script>
+    <script src="buy-ticket.js"></script>
 </body>
 </html>

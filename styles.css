@@ -1,3 +1,4 @@
+/* Основные стили для body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Стили для header */
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -19,17 +21,20 @@ header {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Эффект при наведении на header */
 header:hover {
     background: linear-gradient(135deg, #5a0fb9, #1d6de8);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Анимация для логотипа */
 header .logo {
     font-size: 24px;
     font-weight: 700;
     animation: logoAnimation 2s ease-in-out infinite;
 }
 
+/* Стили для навигации */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,7 @@ header nav {
     padding: 0 20px;
 }
 
+/* Стили для списка навигации */
 header nav ul {
     list-style: none;
     margin: 0;
@@ -46,10 +52,12 @@ header nav ul {
     display: flex;
 }
 
+/* Отступы для элементов списка навигации */
 header nav ul li {
     margin-left: 20px;
 }
 
+/* Стили для ссылок в навигации */
 header nav ul li a {
     color: white;
     text-decoration: none;
@@ -57,11 +65,13 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Эффект при наведении на ссылки в навигации */
 header nav ul li a:hover {
     color: #ffeb3b;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Анимация для логотипа */
 @keyframes logoAnimation {
     0%, 100% {
         transform: scale(1);
@@ -71,6 +81,7 @@ header nav ul li a:hover {
     }
 }
 
+/* Стили для выбора даты */
 .date-selection {
     display: flex;
     justify-content: space-between;
@@ -78,21 +89,25 @@ header nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
+/* Стили для месяца */
 .month {
     text-align: center;
 }
 
+/* Стили для текста месяца */
 .month p {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Стили для контейнера с датами */
 .dates {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Стили для кнопок дат */
 .date-button {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
@@ -108,21 +123,25 @@ header nav ul li a:hover {
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+/* Эффект при наведении на кнопки дат */
 .date-button:hover {
     background-color: #e0e0e0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Стили для кнопок дат при фокусе */
 .date-button:focus {
     background-color: #ffeb3b;
     outline: none;
 }
 
+/* Стили для секции с мероприятиями */
 .events-section {
     padding: 20px;
     animation: fadeIn 1.5s ease;
 }
 
+/* Анимация для появления секции */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -132,16 +151,19 @@ header nav ul li a:hover {
     }
 }
 
+/* Контейнер для карусели */
 .carousel-container {
     position: relative;
     overflow: hidden;
 }
 
+/* Стили для карусели */
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
 }
 
+/* Стили для карточек мероприятий */
 .event {
     min-width: 33.33%;
     box-sizing: border-box;
@@ -155,26 +177,31 @@ header nav ul li a:hover {
     position: relative;
 }
 
+/* Эффект при наведении на карточки мероприятий */
 .event:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Стили для изображений в карточках мероприятий */
 .event img {
     width: 100%;
     height: auto;
     transition: transform 0.3s;
 }
 
+/* Эффект при наведении на изображения в карточках мероприятий */
 .event img:hover {
     transform: scale(1.05);
 }
 
+/* Стили для информации о мероприятии */
 .event-info {
     padding: 20px;
     transition: background-color 0.3s ease;
 }
 
+/* Стили для заголовка мероприятия */
 .event-info h3 {
     font-size: 20px;
     margin: 0 0 10px;
@@ -182,16 +209,19 @@ header nav ul li a:hover {
     text-decoration: none;
 }
 
+/* Стили для текста информации о мероприятии */
 .event-info p {
     margin: 5px 0;
     text-decoration: none;
 }
 
+/* Стили для выделения ключевой информации */
 .event-info p strong {
     color: #2575fc;
     text-decoration: none;
 }
 
+/* Стили для кнопок карусели */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -205,18 +235,22 @@ header nav ul li a:hover {
     transition: background 0.3s ease;
 }
 
+/* Эффект при наведении на кнопки карусели */
 .carousel-button:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
+/* Стили для кнопки предыдущей карточки */
 .carousel-button.prev {
     left: 10px;
 }
 
+/* Стили для кнопки следующей карточки */
 .carousel-button.next {
     right: 10px;
 }
 
+/* Стили для заголовков */
 h1 {
     margin: 20px 0;
     font-size: 36px;
@@ -224,16 +258,19 @@ h1 {
     animation: fadeIn 2s ease;
 }
 
+/* Стили для основного контента */
 main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+/* Стили для секции мероприятий */
 .events-section {
     margin-bottom: 40px;
 }
 
+/* Стили для заголовков секций мероприятий */
 .events-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -243,6 +280,7 @@ main {
     transition: color 0.3s ease;
 }
 
+/* Стили для линии под заголовком секции */
 .events-section h2::after {
     content: '';
     position: absolute;
@@ -253,12 +291,14 @@ main {
     left: 0;
 }
 
+/* Стили для списка мероприятий */
 .event-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Стили для поля со звездами */
 .star-field {
     position: fixed;
     top: 0;
@@ -269,6 +309,7 @@ main {
     z-index: -1;
 }
 
+/* Стили для звезд */
 .star {
     position: absolute;
     width: 2px;
@@ -278,6 +319,7 @@ main {
     animation: fall linear infinite;
 }
 
+/* Стили для footer */
 footer {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -286,11 +328,13 @@ footer {
     margin-top: 40px;
 }
 
+/* Стили для текста в footer */
 footer p {
     margin: 0;
     font-size: 14px;
 }
 
+/* Анимация падения для звезд */
 @keyframes fall {
     to {
         transform: translateY(100vh);
@@ -298,7 +342,7 @@ footer p {
     }
 }
 
-/* Parallax section */
+/* Стили для параллакса */
 .parallax {
     position: relative;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -317,13 +361,14 @@ footer p {
     transition: background-position 0.5s ease;
 }
 
+/* Стили для контента параллакса */
 .parallax-content {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Custom Scrollbar */
+/* Стили для пользовательского скроллбара */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -340,6 +385,8 @@ footer p {
 ::-webkit-scrollbar-thumb:hover {
     background: #2575fc;
 }
+
+/* Стили для карточек мероприятий */
 .event {
     position: relative;
     overflow: hidden;
@@ -355,6 +402,7 @@ footer p {
     transform: scale(1.05);
 }
 
+/* Стили для наложения информации на карточки мероприятий */
 .event-overlay {
     position: absolute;
     top: 0;
@@ -377,11 +425,13 @@ footer p {
     opacity: 1;
 }
 
+/* Стили для заголовка мероприятия в наложении */
 .event-title {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+/* Стили для кнопки мероприятия в наложении */
 .event-button {
     background-color: #ffeb3b;
     color: #333;
@@ -397,7 +447,8 @@ footer p {
 .event-button:hover {
     background-color: #fdd835;
 }
-/* Media Queries for Responsiveness */
+
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     .event {
         min-width: 100%;
@@ -423,6 +474,7 @@ footer p {
     }
 }
 
+/* Стили для ссылок */
 a {
     text-decoration: none;
 }

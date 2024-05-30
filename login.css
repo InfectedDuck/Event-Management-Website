@@ -1,187 +1,242 @@
+/* Основные стили для всего документа */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Установка шрифта для всего текста */
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f4f4f9, #e0eafc);
-    color: #333;
-    transition: background 0.3s ease, color 0.3s ease;
+    background: linear-gradient(135deg, #f4f4f9, #e0eafc); /* Фоновый градиент */
+    color: #333; /* Основной цвет текста */
+    transition: background 0.3s ease, color 0.3s ease; /* Плавный переход фона и цвета текста */
 }
 
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-header:hover {
-    background: linear-gradient(135deg, #5a0fb9, #1d6de8);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: 700;
-    animation: logoAnimation 2s ease-in-out infinite;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffeb3b;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    margin: 20px 0;
-    font-size: 36px;
-    font-weight: 700;
-    animation: fadeIn 2s ease;
-}
-
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
+/* Контейнер для формы */
 .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 40px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ширина контейнера - 100% от родителя */
+    max-width: 400px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #fff; /* Фоновый цвет */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень контейнера */
 }
 
+/* Стили для полей ввода */
+input[type="email"], input[type="password"], input[type="text"], input[type="number"] {
+    width: calc(100% - 20px); /* Полная ширина минус отступы */
+    padding: 10px; /* Внутренние отступы */
+    margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для кнопок */
+button {
+    width: 100%; /* Полная ширина кнопки */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #6200ea; /* Фоновый цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none; /* Без границы */
+    cursor: pointer; /* Курсор-указатель */
+}
+
+/* Изменение фона кнопки при наведении */
+button:hover {
+    background-color: #3700b3; /* Цвет фона при наведении */
+}
+
+/* Стили для заголовка */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Фоновый градиент заголовка */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Внутренние отступы */
+    text-align: center; /* Центрирование текста */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень заголовка */
+    position: sticky; /* Фиксация заголовка при прокрутке */
+    top: 0; /* Позиция сверху */
+    z-index: 1000; /* Порядок отображения */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Плавный переход фона и тени */
+}
+
+/* Изменение фона и тени заголовка при наведении */
+header:hover {
+    background: linear-gradient(135deg, #5a0fb9, #1d6de8); /* Новый градиент фона */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Новая тень */
+}
+
+/* Стили для логотипа в заголовке */
+header .logo {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    animation: logoAnimation 2s ease-in-out infinite; /* Анимация логотипа */
+}
+
+/* Стили для навигации в заголовке */
+header nav {
+    display: flex; /* Flexbox для навигации */
+    justify-content: space-between; /* Распределение элементов по краям */
+    align-items: center; /* Выравнивание по центру */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+/* Стили для списка навигации */
+header nav ul {
+    list-style: none; /* Без маркеров списка */
+    margin: 0; /* Без внешних отступов */
+    padding: 0; /* Без внутренних отступов */
+    display: flex; /* Flexbox для списка */
+}
+
+/* Стили для элементов списка навигации */
+header nav ul li {
+    margin-left: 20px; /* Отступ слева */
+}
+
+/* Стили для ссылок в навигации */
+header nav ul li a {
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Без подчеркивания */
+    font-weight: 500; /* Толщина шрифта */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Изменение цвета ссылок при наведении */
+header nav ul li a:hover {
+    color: #ffeb3b; /* Новый цвет текста */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Тень текста */
+}
+
+/* Стили для заголовков */
+h1 {
+    margin: 20px 0; /* Внешние отступы */
+    font-size: 36px; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    animation: fadeIn 2s ease; /* Анимация появления */
+}
+
+/* Основные стили для содержимого */
+main {
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 40px auto; /* Центрирование */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+/* Дополнительные стили для контейнера формы */
+.form-container {
+    max-width: 400px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+    padding: 40px; /* Внутренние отступы */
+    background: white; /* Фоновый цвет */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Стили для заголовка формы */
 form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
-    color: #2575fc;
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 24px; /* Размер шрифта */
+    text-align: center; /* Центрирование текста */
+    color: #2575fc; /* Цвет текста */
 }
 
+/* Стили для группы ввода */
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
+/* Стили для меток ввода */
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #6a11cb;
+    display: block; /* Блочный элемент */
+    margin-bottom: 5px; /* Отступ снизу */
+    color: #6a11cb; /* Цвет текста */
 }
 
+/* Стили для полей ввода */
 .input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 100%; /* Полная ширина */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ddd; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
 }
 
+/* Стили для кнопок */
 .button {
-    width: 100%;
-    padding: 10px;
-    background: #2575fc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    width: 100%; /* Полная ширина */
+    padding: 10px; /* Внутренние отступы */
+    background: #2575fc; /* Фоновый цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background 0.3s ease; /* Плавный переход фона */
 }
 
+/* Изменение фона кнопки при наведении */
 .button:hover {
-    background: #1d6de8;
+    background: #1d6de8; /* Новый цвет фона */
 }
 
+/* Стили для нижнего колонтитула */
 footer {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Фоновый градиент */
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 20px 0; /* Внутренние отступы */
+    margin-top: 40px; /* Отступ сверху */
 }
 
+/* Стили для текста в нижнем колонтитуле */
 footer p {
-    margin: 0;
-    font-size: 14px;
+    margin: 0; /* Без внешних отступов */
+    font-size: 14px; /* Размер шрифта */
 }
 
+/* Анимация для логотипа */
 @keyframes logoAnimation {
     0%, 100% {
-        transform: scale(1);
+        transform: scale(1); /* Начальная и конечная шкала */
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Шкала в середине анимации */
     }
 }
 
+/* Анимация для плавного появления */
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0; /* Начальная непрозрачность */
     }
     to {
-        opacity: 1;
+        opacity: 1; /* Конечная непрозрачность */
     }
 }
 
-/* Custom Scrollbar */
+/* Пользовательские стили для полосы прокрутки */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 10px; /* Ширина полосы прокрутки */
 }
 
 ::-webkit-scrollbar-track {
-    background: #e0eafc;
+    background: #e0eafc; /* Фон дорожки полосы прокрутки */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #6a11cb;
-    border-radius: 5px;
+    background: #6a11cb; /* Фон ползунка */
+    border-radius: 5px; /* Скругление углов ползунка */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #2575fc;
+    background: #2575fc; /* Цвет ползунка при наведении */
 }
 
-/* Media Queries for Responsiveness */
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     main {
-        padding: 0 10px;
+        padding: 0 10px; /* Уменьшение внутренних отступов */
     }
 
     .form-container {
-        padding: 20px;
+        padding: 20px; /* Уменьшение внутренних отступов */
     }
 }

@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Получение параметров URL
     const urlParams = new URLSearchParams(window.location.search);
-    const type = urlParams.get('type');
+    const type = urlParams.get('type'); // Получение значения параметра 'type'
 
+    // Получение контейнера для событий и заголовка
     const eventsContainer = document.getElementById('events-container');
     const eventsTitle = document.getElementById('events-title');
 
+    // Получение данных о событиях из localStorage
     const eventsData = JSON.parse(localStorage.getItem('eventsData')) || {};
 
+    // Функция для создания элемента события
     function createEventElement(event) {
         const article = document.createElement('article');
         article.className = 'event';
@@ -25,15 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
         return article;
     }
 
+    // Функция для заполнения контейнера событиями
     function populateEvents(events) {
-        eventsContainer.innerHTML = '';
+        eventsContainer.innerHTML = ''; // Очистка контейнера
         events.forEach(event => {
             const eventElement = createEventElement(event);
-            eventsContainer.appendChild(eventElement);
+            eventsContainer.appendChild(eventElement); // Добавление элемента события в контейнер
         });
     }
 
     let filteredEvents = [];
+    // Фильтрация событий в зависимости от типа
     switch (type) {
         case 'popular':
             eventsTitle.textContent = 'Популярное';
@@ -50,5 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
     }
 
+    // Заполнение контейнера отфильтрованными событиями
     populateEvents(filteredEvents);
 });

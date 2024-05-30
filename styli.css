@@ -1,3 +1,4 @@
+/* Основные стили для body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Стили для header */
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -19,17 +21,20 @@ header {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Эффект при наведении на header */
 header:hover {
     background: linear-gradient(135deg, #5a0fb9, #1d6de8);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Анимация для логотипа */
 header .logo {
     font-size: 24px;
     font-weight: 700;
     animation: logoAnimation 2s ease-in-out infinite;
 }
 
+/* Стили для навигации */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,7 @@ header nav {
     padding: 0 20px;
 }
 
+/* Стили для списка навигации */
 header nav ul {
     list-style: none;
     margin: 0;
@@ -46,10 +52,12 @@ header nav ul {
     display: flex;
 }
 
+/* Отступы для элементов списка навигации */
 header nav ul li {
     margin-left: 20px;
 }
 
+/* Стили для ссылок в навигации */
 header nav ul li a {
     color: white;
     text-decoration: none;
@@ -57,11 +65,13 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
+/* Эффект при наведении на ссылки в навигации */
 header nav ul li a:hover {
     color: #ffeb3b;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Анимация для логотипа */
 @keyframes logoAnimation {
     0%, 100% {
         transform: scale(1);
@@ -71,17 +81,20 @@ header nav ul li a:hover {
     }
 }
 
+/* Стили для основного контента */
 main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+/* Стили для списка мероприятий */
 .events-list {
     margin-bottom: 40px;
     animation: fadeIn 1.5s ease;
 }
 
+/* Анимация для появления секции */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -91,6 +104,7 @@ main {
     }
 }
 
+/* Стили для заголовков списка мероприятий */
 .events-list h1 {
     margin: 20px 0;
     font-size: 36px;
@@ -99,12 +113,14 @@ main {
     transition: color 0.3s ease;
 }
 
+/* Стили для контейнера мероприятий */
 .events-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Стили для карточек мероприятий */
 .event {
     flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
@@ -116,21 +132,25 @@ main {
     position: relative;
 }
 
+/* Эффект при наведении на карточки мероприятий */
 .event:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Стили для изображений в карточках мероприятий */
 .event img {
     width: 100%;
     height: auto;
     transition: transform 0.3s, filter 0.3s;
 }
 
+/* Эффект при наведении на изображения в карточках мероприятий */
 .event img:hover {
     transform: scale(1.05);
 }
 
+/* Наложение информации на карточки мероприятий */
 .event-overlay {
     position: absolute;
     top: 0;
@@ -149,15 +169,18 @@ main {
     box-sizing: border-box;
 }
 
+/* Эффект при наведении на карточку мероприятия */
 .event:hover .event-overlay {
     opacity: 1;
 }
 
+/* Стили для заголовка мероприятия в наложении */
 .event-title {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+/* Стили для кнопки мероприятия в наложении */
 .event-button {
     background-color: #ffeb3b;
     color: #333;
@@ -170,29 +193,35 @@ main {
     transition: background-color 0.3s ease;
 }
 
+/* Эффект при наведении на кнопку мероприятия */
 .event-button:hover {
     background-color: #fdd835;
 }
 
+/* Стили для информации о мероприятии */
 .event-info {
     padding: 20px;
     transition: background-color 0.3s ease;
 }
 
+/* Стили для заголовка информации о мероприятии */
 .event-info h3 {
     font-size: 20px;
     margin: 0 0 10px;
     color: #6a11cb;
 }
 
+/* Стили для текста информации о мероприятии */
 .event-info p {
     margin: 5px 0;
 }
 
+/* Стили для выделения ключевой информации */
 .event-info p strong {
     color: #2575fc;
 }
 
+/* Стили для footer */
 footer {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -201,11 +230,31 @@ footer {
     margin-top: 40px;
 }
 
+/* Стили для текста в footer */
 footer p {
     margin: 0;
     font-size: 14px;
 }
 
+/* Стили для пользовательского скроллбара */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0eafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6a11cb;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2575fc;
+}
+
+/* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
     .event {
         flex: 1 1 calc(50% - 20px);
@@ -228,12 +277,14 @@ footer p {
     }
 }
 
+/* Стили для ссылок */
 a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Эффект при наведении на ссылки */
 a:hover {
     color: #ffeb3b;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);

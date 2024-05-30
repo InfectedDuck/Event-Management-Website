@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Event Data</title>
+</head>
+<body>
+    <button id="insertDataButton">Insert Event Data</button>
+
+    <script>
+        const eventsData = {
+            "1": {
+                "title": "Великолепие корейских дорам в исполнении JAZI ORCHESTRA",
+                "date": "2024-06-13",
+                "time": "17:00",
+                "location": "г. Семей, ул. Б. Момышулы, 43, Городской дворец культуры",
+                "price": "от 5000 тг"
+            },
+            "2": {
+                "title": "Ұ-Night Show",
+                "date": "2024-06-06",
+                "time": "19:00",
+                "location": "Семей қ., Семей қалалық мәдениет сарайы",
+                "price": "от 2000 тг"
+            },
+            "3": {
+                "title": "JAZI Orchestra - Концерт Пацанских Саундтреков",
+                "date": "2024-06-13",
+                "time": "20:00",
+                "location": "г. Семей, ул. Б. Момышулы, 43, Городской дворец культуры",
+                "price": "от 5000 тг"
+            },
+            "4": {
+                "title": "Миф об Атилле",
+                "date": "2024-06-15",
+                "time": "18:00",
+                "location": "г. Семей Русский драматический театр им. Ф.М. Достоевского",
+                "price": "от 3000 тг"
+            },
+            "5": {
+                "title": "Шоу «СИНИЙ ТРАКТОР»",
+                "date": "2024-06-01",
+                "time": "12:00",
+                "location": "г. Семей, Городской дворец культуры, ул. Б. Момышулы, 43",
+                "price": "от 2000 тг"
+            },
+            "6": {
+                "title": "Қоштасқым келмейді. Семей қаласында",
+                "date": "2024-06-25",
+                "time": "18:00",
+                "location": "Абай атындағы қазақ музыкалық драма театры",
+                "price": "от 3000 тг"
+            },
+            "7": {
+                "title": "А.С. Пушкин: Моцарт и Сальери",
+                "date": "2024-06-10",
+                "time": "18:00",
+                "location": "Русский драматический театр",
+                "price": "от 1500 тг"
+            },
+            "8": {
+                "title": "Енлик-Кебек",
+                "date": "2024-06-20",
+                "time": "17:00",
+                "location": "Городской дворец культуры",
+                "price": "от 5000 тг"
+            },
+            "9": {
+                "title": "Өз отыңды өшірме",
+                "date": "2024-06-30",
+                "time": "19:00",
+                "location": "г. Семей, молодежный театр «Дарига-ай»",
+                "price": "от 2000 тг"
+            },
+            "10": {
+                "title": "The Greatest Hits",
+                "date": "2024-05-29",
+                "time": "19:00",
+                "location": "Дворец культуры города Семей",
+                "price": "от 3000 тг"
+            },
+            "11": {
+                "title": "Гауһартас. Семей қаласында",
+                "date": "2024-06-05",
+                "time": "18:00",
+                "location": "Семей, Абай атындағы қазақ музыкалық драма театры",
+                "price": "от 3500 тг"
+            },
+            "12": {
+                "title": "Полуфинал плей-офф чемпионата Казахстана",
+                "date": "2024-05-31",
+                "time": "19:30",
+                "location": "г. Семей, Микрорайон Карагайлы, 39, «Арена»",
+                "price": "от 4000 тг"
+            },
+            "13": {
+                "title": "Абай-Тоғжан Семей қаласында",
+                "date": "2024-06-12",
+                "time": "17:00",
+                "location": "Семей, Абай атындағы қазақ музыкалық драма театры",
+                "price": "от 4500 тг"
+            }
+        };
+
+        document.getElementById('insertDataButton').addEventListener('click', () => {
+            const simplifiedEventsData = Object.values(eventsData).map(event => ({
+                event_name: event.title,
+                location: event.location,
+                event_date_time: `${event.date} ${event.time}`,
+                price: event.price
+            }));
+
+            fetch('insertEvents.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(simplifiedEventsData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Events inserted successfully');
+                } else {
+                    alert('Error inserting events: ' + data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
