@@ -1,116 +1,55 @@
 # Kametay Events Management System
 
-## Описание проекта
+## Project description
 
-Kametay Events Management System - это современная и многофункциональная платформа для управления мероприятиями, предназначенная для организации, управления и посещения различных событий в городе Семей. Система предоставляет обширные возможности как для пользователей, так и для организаторов мероприятий, включая регистрацию, авторизацию, просмотр и покупку билетов, изменение мест, синхронизацию с Google Calendar и многое другое.
+Kametay Events Management System is a modern and multifunctional event management platform designed for organizing, managing and attending various events in the city of Semey. The system provides extensive capabilities for both users and event organizers, including registration, login, viewing and purchasing tickets, changing seats, synchronizing with Google Calendar and much more.
 
-## Основные функции
+## Main functions
 
-### Регистрация и авторизация пользователей
+### User registration and authorization
 
-Kametay Events Management System обеспечивает удобный процесс регистрации и авторизации для пользователей. Новые пользователи могут легко создать аккаунт, заполнив необходимую информацию, такую как имя, фамилия, возраст, электронная почта и пароль. После регистрации пользователи могут войти в систему, используя свои учетные данные.
+Kametay Events Management System provides a convenient registration and authorization process for users. New users can easily create an account by filling out the required information such as first name, last name, age, email and password. Once registered, users can log in using their credentials.
 
-Регистрация и авторизация являются основными функциями системы, обеспечивающими безопасность и конфиденциальность данных пользователей. Использование защищенных хэшей для паролей и проверка данных при авторизации гарантируют высокий уровень безопасности.
+Registration and authorization are the main functions of the system, ensuring the security and confidentiality of user data. The use of secure hashes for passwords and data verification during authorization guarantee a high level of security.
 
-### Просмотр и покупка билетов
+### View and purchase tickets
 
-После входа в систему пользователи могут просматривать список доступных мероприятий. Для каждого мероприятия предоставляется подробная информация, включая название, описание, дату, время, место проведения и цену билетов. Пользователи могут выбирать мероприятия, которые их интересуют, и просматривать доступные места.
+Once logged in, users can view a list of available events. For each event, detailed information is provided, including name, description, date, time, location and ticket price. Users can select events that interest them and view available locations.
 
-Платформа предоставляет удобный интерфейс для выбора мест, включая визуальное представление схемы зала. Пользователи могут выбирать доступные места, добавлять их в корзину и совершать покупку билетов. Система также поддерживает подтверждение покупки и отправку уведомлений по электронной почте.
+The platform provides a convenient interface for selecting seats, including a visual representation of the hall layout. Users can select available seats, add them to cart, and purchase tickets. The system also supports purchase confirmation and email notifications.
 
-### Профиль пользователя
+### User profile
 
-Kametay Events Management System предоставляет пользователям возможность управлять своим профилем. В профиле пользователи могут просматривать и редактировать свою личную информацию, такую как имя, фамилия, возраст и электронная почта. Кроме того, пользователи могут просматривать историю своих покупок, управлять текущими билетами и изменять места.
+Kametay Events Management System provides users with the ability to manage their profile. In the profile, users can view and edit their personal information such as first name, last name, age and email. Additionally, users can view their purchase history, manage current tickets, and change seats.
 
-Функция профиля пользователя включает в себя возможность удаления и изменения билетов. Пользователи могут удалять билеты, если они больше не планируют посещать мероприятие, или менять места на более удобные.
+The user profile feature includes the ability to delete and change tickets. Users can delete tickets if they no longer plan to attend the event, or change seats to more convenient ones.
 
-### Синхронизация с Google Calendar
+### Sync with Google Calendar
 
-Одной из уникальных функций системы является возможность синхронизации событий с Google Calendar. Пользователи могут легко добавлять мероприятия в свой календарь Google, что позволяет им получать напоминания и следить за своими запланированными событиями. Это значительно упрощает управление расписанием и помогает избежать пропуска важных мероприятий.
+One of the unique features of the system is the ability to synchronize events with Google Calendar. Users can easily add events to their Google Calendar, allowing them to receive reminders and keep track of their scheduled events. This makes it much easier to manage your schedule and help you avoid missing important events.
 
-### Модальные окна и взаимодействие с пользователем
+### Modals and user interaction
 
-Для удобства взаимодействия с пользователем Kametay Events Management System использует модальные окна. Например, при выборе места для мероприятия открывается модальное окно с визуальной схемой зала, где пользователи могут выбирать доступные места. После выбора мест пользователи могут подтвердить покупку, и система обработает запрос.
+For ease of user interaction, Kametay Events Management System uses modal windows. For example, when selecting a venue for an event, a modal window opens with a visual layout of the venue, allowing users to select available seats. After selecting seats, users can confirm the purchase and the system will process the request.
 
-### Адаптивный дизайн
+### Adaptive design
 
-Kametay Events Management System имеет адаптивный дизайн, что позволяет пользователям комфортно использовать платформу на различных устройствах, включая настольные компьютеры, планшеты и смартфоны. Все элементы интерфейса автоматически подстраиваются под размер экрана, обеспечивая оптимальное отображение и удобство использования.
+Kametay Events Management System has a responsive design that allows users to comfortably use the platform on various devices, including desktop computers, tablets and smartphones. All interface elements automatically adjust to fit the screen size, ensuring optimal display and ease of use.
 
-### Удобный интерфейс администратора
+### User-friendly admin interface
 
-Система включает в себя интерфейс администратора, который позволяет организаторам мероприятий управлять событиями, билетами и пользователями. Администраторы могут добавлять новые мероприятия, редактировать информацию о них, управлять доступными местами и отслеживать продажи билетов. Это упрощает процесс организации и проведения мероприятий, обеспечивая их успешное выполнение.
+The system includes an admin interface that allows event organizers to manage events, tickets and users. Administrators can add new events, edit event information, manage available seats, and track ticket sales. This simplifies the process of organizing and conducting events, ensuring their successful implementation.
 
-## Преимущества Kametay Events Management System
+## Benefits of Kametay Events Management System
 
-### Интуитивно понятный интерфейс
+### Intuitive interface
 
-Kametay Events Management System обладает интуитивно понятным интерфейсом, который обеспечивает удобство использования как для обычных пользователей, так и для администраторов. Все функции и возможности системы логично структурированы и легко доступны, что позволяет быстро освоить работу с платформой.
+Kametay Events Management System has an intuitive interface that provides ease of use for both regular users and administrators. All functions and capabilities of the system are logically structured and easily accessible, which allows you to quickly master working with the platform.
 
-### Безопасность данных
+### Data Security
 
-Система обеспечивает высокий уровень безопасности данных пользователей. Пароли хранятся в зашифрованном виде с использованием современных алгоритмов хеширования, что защищает их от несанкционированного доступа. Регулярные обновления безопасности и проверки уязвимостей помогают поддерживать безопасность платформы на высоком уровне.
+The system provides a high level of security for user data. Passwords are stored encrypted using modern hashing algorithms, which protects them from unauthorized access. Regular security updates and vulnerability checks help keep the platform secure at a high level.
 
-### Гибкость и масштабируемость
+### Flexibility and scalability
 
-Kametay Events Management System разработана с учетом возможности расширения и масштабирования. Система может быть легко адаптирована под нужды различных типов мероприятий, будь то концерты, театральные представления, спортивные события или конференции. Гибкость системы позволяет интегрировать дополнительные функции и модули по мере необходимости.
-
-### Интеграция с внешними сервисами
-
-Kametay Events Management System легко интегрируется с различными внешними сервисами и платформами. Синхронизация с Google Calendar, возможность интеграции с платежными системами и маркетинговыми инструментами позволяют расширить функциональность платформы и улучшить пользовательский опыт.
-
-## Технические особенности
-
-### Используемые технологии
-
-Kametay Events Management System разработана с использованием современных технологий и инструментов, таких как:
-
-- **PHP** для серверной части
-- **MySQL** для базы данных
-- **HTML**, **CSS** и **JavaScript** для фронтенда
-- **AJAX** для асинхронного взаимодействия с сервером
-- **Google API** для синхронизации с календарем
-
-### Структура проекта
-
-Проект имеет четко организованную структуру, которая включает в себя следующие основные компоненты:
-
-- **Frontend**: Отвечает за отображение интерфейса пользователя и взаимодействие с ним. Включает в себя HTML-шаблоны, стили CSS и скрипты JavaScript.
-- **Backend**: Отвечает за обработку запросов от клиента, взаимодействие с базой данных и выполнение бизнес-логики. Реализован на PHP с использованием MySQL.
-- **Database**: Содержит все данные, связанные с пользователями, мероприятиями, билетами и другими аспектами системы. Реализована с использованием MySQL.
-
-### Поддержка модульности
-
-Система разработана с поддержкой модульности, что позволяет легко добавлять и изменять функциональность. Каждый компонент системы (регистрация, авторизация, просмотр мероприятий, покупка билетов и т.д.) реализован в виде отдельного модуля, что упрощает поддержку и развитие проекта.
-
-## Внедрение и развертывание
-
-Kametay Events Management System может быть развернута на любом веб-сервере, поддерживающем PHP и MySQL. Процесс развертывания включает в себя следующие шаги:
-
-1. **Подготовка сервера**: Установка веб-сервера (например, Apache или Nginx), PHP и MySQL.
-2. **Развертывание проекта**: Копирование файлов проекта на сервер и настройка веб-сервера для их обслуживания.
-3. **Настройка базы данных**: Создание базы данных и импорт начальных данных.
-4. **Настройка конфигурации**: Обновление файлов конфигурации с учетом параметров сервера и базы данных.
-5. **Тестирование**: Проверка работоспособности системы и устранение возможных проблем.
-
-## Преимущества для пользователей
-
-Kametay Events Management System предоставляет пользователям множество преимуществ, включая:
-
-- **Удобство использования**: Интуитивно понятный интерфейс и простой процесс регистрации, авторизации и покупки билетов.
-- **Безопасность данных**: Защита персональных данных и безопасное хранение паролей.
-- **Синхронизация с календарем**: Возможность добавления мероприятий в Google Calendar для удобного управления расписанием.
-- **Гибкость выбора**: Возможность выбора мест и изменения билетов при необходимости.
-- **Адаптивный дизайн**: Поддержка различных устройств, включая настольные компьютеры, планшеты и смартфоны.
-
-## Преимущества для организаторов
-
-Организаторы мероприятий также получают множество преимуществ от использования Kametay Events Management System:
-
-- **Удобство управления**: Простой интерфейс для добавления и редактирования мероприятий, управления билетами и пользователями.
-- **Аналитика и отчетность**: Возможность получения отчетов о продажах билетов, посещаемости мероприятий и другой аналитической информации.
-- **Маркетинговые инструменты**: Интеграция с маркетинговыми платформами и инструментами для продвижения мероприятий.
-- **Поддержка масштабирования**: Возможность расширения функциональности и масштабирования системы под растущие потребности.
-
-## Заключение
-
-Kametay Events Management System - это мощная и гибкая платформа для управления мероприятиями, которая предоставляет пользователям и организаторам все необходимые инструменты для успешного проведения событий. Система сочетает в себе удобство использования, безопасность, гибкость и масштабируемость, что делает ее идеальным решением для организации мероприятий любого масштаба и типа.
+Kametay Events Management System is designed to be expandable and scalable. The system can be easily adapted to the needs of various types of events, be it concerts, theater performances, sporting events or conferences. The flexibility of the system allows int
