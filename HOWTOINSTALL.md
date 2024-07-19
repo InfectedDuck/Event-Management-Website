@@ -1,100 +1,100 @@
-# Установка Kametay Events Management System на локальный компьютер
+# Installing Kametay Events Management System on a local computer
 
-Этот гид поможет вам установить и запустить Kametay Events Management System на вашем локальном компьютере. Мы будем использовать XAMPP для настройки веб-сервера и базы данных, а также Composer для управления зависимостями PHP.
+This guide will help you install and run Kametay Events Management System on your local computer. We'll use XAMPP to set up the web server and database, and Composer to manage PHP dependencies.
 
-## Шаг 1: Установка XAMPP
+## Step 1: Install XAMPP
 
-### 1. Скачайте XAMPP
+### 1. Download XAMPP
 
-Перейдите на [официальный сайт XAMPP](https://www.apachefriends.org/index.html) и скачайте последнюю версию XAMPP для вашей операционной системы (Windows, macOS, Linux).
+Go to [XAMPP official website](https://www.apachefriends.org/index.html) and download the latest version of XAMPP for your operating system (Windows, macOS, Linux).
 
-### 2. Установите XAMPP
+### 2. Install XAMPP
 
-Запустите установочный файл и следуйте инструкциям мастера установки. Убедитесь, что вы выбрали компоненты Apache и MySQL, так как они необходимы для работы Kametay Events Management System.
+Run the installation file and follow the installation wizard instructions. Make sure you select the Apache and MySQL components as they are required for the Kametay Events Management System to function.
 
-### 3. Запустите XAMPP
+### 3. Launch XAMPP
 
-После установки запустите XAMPP Control Panel и запустите следующие модули:
+After installation, launch XAMPP Control Panel and run the following modules:
 - Apache
 - MySQL
 
-## Шаг 2: Настройка базы данных
+## Step 2: Setting up the database
 
-### 1. Откройте phpMyAdmin
+### 1. Open phpMyAdmin
 
-В XAMPP Control Panel нажмите на кнопку "Admin" рядом с MySQL, чтобы открыть phpMyAdmin в браузере.
+In XAMPP Control Panel, click on the "Admin" button next to MySQL to open phpMyAdmin in the browser.
 
-### 2. Создайте новую базу данных
+### 2. Create a new database
 
-В phpMyAdmin создайте новую базу данных для вашего проекта. Назовите ее `event_management`.
+In phpMyAdmin, create a new database for your project. Call it `event_management`.
 
-### 3. Создайте нужные таблица
+### 3. Create the necessary tables
 
-В phpMyAdmin зайдите на созданную датабазу и введите:
+In phpMyAdmin, go to the created database and enter:
 ```
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    firstName VARCHAR(255) NOT NULL,
-    lastName VARCHAR(255) NOT NULL,
-    age INT NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ firstName VARCHAR(255) NOT NULL,
+ lastName VARCHAR(255) NOT NULL,
+ age INT NOT NULL,
+ email VARCHAR(255) NOT NULL UNIQUE,
+ password VARCHAR(255) NOT NULL,
 );
 ```
-Затем,
+Then,
 ```
 CREATE TABLE events (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    event_name VARCHAR(255) NOT NULL,
-    location VARCHAR(255) NOT NULL,
-    event_date_time DATETIME NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ event_name VARCHAR(255) NOT NULL,
+ location VARCHAR(255) NOT NULL,
+ event_date_time DATETIME NOT NULL,
+ price DECIMAL(10, 2) NOT NULL,
 );
 ```
-Затем,
+Then,
 ```
 CREATE TABLE tickets (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    userId INT NOT NULL,
-    eventId INT NOT NULL,
-    seat_number VARCHAR(255) NOT NULL,
-    FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (eventId) REFERENCES events(id) ON DELETE CASCADE
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ userId INT NOT NULL,
+ eventId INT NOT NULL,
+ seat_number VARCHAR(255) NOT NULL,
+ FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE,
+ FOREIGN KEY (eventId) REFERENCES events(id) ON DELETE CASCADE
 );
 ```
-Поздравляю теперь таблицы созданы!)
-## Шаг 3: Установка Composer
+Congratulations, the tables are now created!)
+## Step 3: Install Composer
 
-### 1. Скачайте и установите Composer
+### 1. Download and install Composer
 
-Перейдите на [официальный сайт Composer](https://getcomposer.org/) и скачайте установочный файл для вашей операционной системы. Следуйте инструкциям по установке.
+Go to [Composer official website](https://getcomposer.org/) and download the installation file for your operating system. Follow the installation instructions.
 
-### 2. Проверьте установку
+### 2. Check installation
 
-Откройте командную строку (терминал) и введите команду:
+Open a command line (terminal) and enter the command:
 
 ```sh
 composer --version
 ```
-### 3. Установите Google calendar api:
-Это всё нужно писать в терминале вашего компилятора. Например, в Vs code Терминал находится сверху и вы должны нажать на него, затем на "Новый терминал"
-Перейдите в путь вашего проекта:
+### 3. Install Google calendar api:
+All this needs to be written in the terminal of your compiler. For example, in Vs code the Terminal is at the top and you have to click on it, then on "New Terminal"
+Go to your project path:
 ```
 cd path/to/your/project
 ```
-Установитие клиентскую библиотеку Google API:
+Installing the Google API client library:
 ```
 composer require google/apiclient:^2.0
 ```
-## Шаг 4: Скачивание и распаковка файлов:
-### 1. Скачайте все файлы проекта
-Скачайте все файлы проекта и поместите их в одну папку.
-### 2. Переместите файлы в папку XAMPP
-Перейдите в корневую папку XAMPP (обычно это C:\xampp\htdocs на Windows) и скопируйте вашу папку с проектом в эту директорию.
-## Шаг 5: Открытие вебсайта и настройка:
-### 1. Заполнение данных в таблице events
-После того как XAMPP запущен, перейдите по ссылке http://localhost/название_вашей_папки/eventtodatabase.html, затем нажмите на кнопку "Insert Event Data", чтобы залить данные в таблицу events.
-### 2. Запуск сайта
-Перейдите по ссылке http://localhost/название_вашей_папки/EventManagementSystem.html, чтобы открыть сайт. Если у вас возникли вопросы или проблемы, напишите на почту kametaytoktar@gmail.com.
-## Заключение:
-Следуя этим шагам, вы сможете установить и запустить Kametay Events Management System на вашем локальном компьютере. Если у вас возникнут какие-либо вопросы или проблемы, пожалуйста, свяжитесь с нами для получения дополнительной помощи.
+## Step 4: Download and unpack files:
+### 1. Download all project files
+Download all project files and place them in one folder.
+### 2. Move the files to the XAMPP folder
+Go to your XAMPP root folder (usually C:\xampp\htdocs on Windows) and copy your project folder to this directory.
+## Step 5: Opening the website and setting up:
+### 1. Filling in the data in the events table
+Once XAMPP is running, go to http://localhost/your_folder_name/eventtodatabase.html, then click on the "Insert Event Data" button to insert data into the events table.
+### 2. Website launch
+Go to http://localhost/your_folder_name/EventManagementSystem.html to open the site. If you have any questions or problems, please email kametaytoktar@gmail.com.
+## Conclusion:
+By following these steps, you will be able to install and run Kametay Events Management System on your local computer. If you have any questions or concerns, please contact us for further assistance.
