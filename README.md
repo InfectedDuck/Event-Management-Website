@@ -24,9 +24,6 @@ Kametay Events Management System provides users with the ability to manage their
 
 The user profile feature includes the ability to delete and change tickets. Users can delete tickets if they no longer plan to attend the event, or change seats to more convenient ones.
 
-### Sync with Google Calendar
-
-One of the unique features of the system is the ability to synchronize events with Google Calendar. Users can easily add events to their Google Calendar, allowing them to receive reminders and keep track of their scheduled events. This makes it much easier to manage your schedule and help you avoid missing important events.
 
 ### Modals and user interaction
 
@@ -46,10 +43,5 @@ The system includes an admin interface that allows event organizers to manage ev
 
 Kametay Events Management System has an intuitive interface that provides ease of use for both regular users and administrators. All functions and capabilities of the system are logically structured and easily accessible, which allows you to quickly master working with the platform.
 
-### Data Security
-
-The system provides a high level of security for user data. Passwords are stored encrypted using modern hashing algorithms, which protects them from unauthorized access. Regular security updates and vulnerability checks help keep the platform secure at a high level.
-
-### Flexibility and scalability
 
 Kametay Events Management System is designed to be expandable and scalable. The system can be easily adapted to the needs of various types of events, be it concerts, theater performances, sporting events or conferences. The flexibility of the system allows int
